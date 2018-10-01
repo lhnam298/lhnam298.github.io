@@ -1,7 +1,53 @@
 <!DOCTYPE html>
 <html>
+<head>
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+<h2>OS</h2>
+<dl>
+    <dt class="question">In Unix, what is a daemon?</dt>
+    <dd>
+        <ul>
+            <li>A daemon is a long-running background process that answers requests for services.
+             The term originated with Unix, but most operating systems use daemons in some form or another.
+             In Unix, the names of daemons conventionally end in "d".
+             Some examples include inetd, httpd, nfsd, sshd, named, and lpd.</li>
+        </ul>
+    </dd>
+</dl>
+
+<h2>Docker</h2>
+<dl>
+    <dt class="question">What is the difference between the <code>COPY</code> and <code>ADD</code> commands in a Dockerfile?</dt>
+    <dd>
+        <ul>
+            <li>The both commands will copy new files from <code>&lt;src&gt;</code> and add them to the container's filesystem at path <code>&lt;dest&gt;</code></li>
+            <li>The major difference is that <code>ADD</code> can do more than <code>COPY</code>:
+                <ul>
+                    <li><code>ADD</code> allows <code>&lt;src&gt;</code> to be a <code>URL</code></li>
+                    <li>If the <code>&lt;src&gt;</code> parameter of <code>ADD</code> is an archive in a recognised compression format, it will be unpacked</li>
+                </ul>
+            </li>
+        </ul>
+    </dd>
+</dl>
+<h2>PHP</h2>
+<h2>Other</h2>
+<dl>
+    <dt class="question">MediaInfo</dt>
+    <dd>
+        <ul>
+            <li>A convenient unified display of the most relevant technical and tag data for video and audio files</li>
+            <li>Install and usage in MacOS
+                <ul>
+                    <li>Install: <code>brew install media-info</code></li>
+                    <li>Usage: <code>mediainfo ~/path/media</code></li>
+                    <li>Related: <a href="https://mediaarea.net/en/MediaInfo">https://mediaarea.net/en/MediaInfo</a></li>
+                </ul>
+            </li>
+        </ul>
+    </dd>
+</dl>
 </body>
 </html>

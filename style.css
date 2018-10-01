@@ -1,0 +1,7 @@
+@charset "UTF-8";
+html {
+	margin: 0 15px;
+}
+.question {
+	font-weight: bold;
+}
