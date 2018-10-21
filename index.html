@@ -31,6 +31,31 @@
             </li>
         </ul>
     </dd>
+
+    <dt class="question">Shell and Exec forms</dt>
+    <dd>
+            <ul>
+            <li>Shell form: <code>&#60;instruction&#62; &#60;command&#62;</code>
+                    <ul>
+                        <li>When instruction is executed in shell form it calls <code>/bin/sh -c &#60;command&#62;</code> under the hood and normal shell processing happens</li>
+                    </ul>
+            </li>
+            <li>Exec form: <code>&#60;instruction&#62; ["executable", "param1", "param2", ...]</code>
+                    <ul>
+                        <li>When instruction is executed in exec form it calls executable directly, and shell processing does not happen</li>
+                    </ul>
+            </li>
+            <li>Detail: <a href="http://goinbigdata.com/docker-run-vs-cmd-vs-entrypoint/">http://goinbigdata.com/docker-run-vs-cmd-vs-entrypoint/</a></li>
+        </ul>
+    </dd>
+    
+    <dt class="question">CMD vs ENTRYPOINT</dt>
+        <ul>
+            <li>CMD sets default command and/or parameters, which can be overwritten from command line when docker container runs</li>
+            <li>ENTRYPOINT configures a container that will run as an executable</li>
+        </ul>
+    <dd>
+    </dd>
 </dl>
 
 <h2>PHP</h2>
@@ -59,6 +84,14 @@
                 </ul>
             </li>
         </ul>
+    </dd>
+    <dt class="question">What is POSIX?</dt>
+    <dd>
+            <ul>
+                <li>Short for "Portable Operating System Interface for uni-X", POSIX is a set of standards codified by the IEEE and issued by ANSI and ISO.
+                 The goal of POSIX is to ease the task of cross-platform software development by establishing a set of guidelines for operating system vendors to follow.</li>
+                <li>Related: <a href="https://kb.iu.edu/d/agjv">https://kb.iu.edu/d/agjv</a></li>
+            </ul>
     </dd>
 </dl>
 </body>
