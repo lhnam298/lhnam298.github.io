@@ -4,6 +4,7 @@
     <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
+<h1>Notes & Tips</h1>
 <h2>OS</h2>
 <dl>
     <dt class="question">In Unix, what is a daemon?</dt>
@@ -55,14 +56,42 @@
     
     <dt class="question">CMD vs ENTRYPOINT</dt>
         <ul>
-            <li>CMD instruction allows you to set a default command, which will be executed only when you run container without specifying a command. If Docker container runs with a command, the default command will be ignored. If Dockerfile has more than one CMD instruction, all but last CMD instructions are ignored.</li>
-            <li>ENTRYPOINT instruction allows you to configure a container that will run as an executable. It looks similar to CMD, because it also allows you to specify a command with parameters. The difference is ENTRYPOINT command and parameters are not ignored when Docker container runs with command line parameters.</li>
+            <li>CMD instruction allows you to set a default command, which will be executed only when you run container without specifying a command.
+             If Docker container runs with a command, the default command will be ignored.
+             If Dockerfile has more than one CMD instruction, all but last CMD instructions are ignored.</li>
+            <li>ENTRYPOINT instruction allows you to configure a container that will run as an executable.
+             It looks similar to CMD, because it also allows you to specify a command with parameters.
+             The difference is ENTRYPOINT command and parameters are not ignored when Docker container runs with command line parameters.</li>
         </ul>
     <dd>
     </dd>
 </dl>
 
 <h2>PHP</h2>
+
+<h2>Git</h2>
+<dl>
+    <dt class="question">Remove git config info</dt>
+    <dd>
+        <ul>
+            <li><code>git config --global --unset-all user.name</code></li>
+            <li><code>git config --global --unset-all user.email</code></li>
+        </ul>
+    </dd>
+</dl>
+
+<h2>Composer</h2>
+<dl>
+    <dt class="question">Should <i>composer.lock</i> be committed to version control?</dt>
+    <dd>
+        <ul>
+            <li><i>composer.lock</i> file stores information about your dependencies and about the dependencies of your dependencies</li>
+            <li>Because your dependencies have their own dependencies, and their configuration might be specified in a format that it allows updates to subversions, or maybe even entire versions.
+            So, having your composer.lock file in the version system will store the exact version of this sub-dependencies, when you and your teammate does a composer install you both will get the same versions.</li>
+            <li>Run <code>composer update</code> to update version of the dependencies</li>
+        </ul>
+    </dd>
+</dl>
 
 <h2>Ansible</h2>
 <dl>
