@@ -16,9 +16,36 @@
              Some examples include inetd, httpd, nfsd, sshd, named, and lpd.</li>
         </ul>
     </dd>
+
     <dt class="question">System directories</dt>
     <dd>
         <img src="IMG_1070.JPG" height="500px">
+    </dd>
+
+    <dt class="question">Use public key authentication to access remote server</dt>
+    <dd>
+        <ul>
+            <li>Generating RSA Keys: <code>ssh-keygen -t rsa</code></li>
+            <li>Transfer Client Key to Host: <code>ssh-copy-id username@hostname</code></li>
+        </ul>
+    </dd>
+
+    <dt class="question">How To Enable EPEL Repository in RHEL/CentOS 7/6</dt>
+    <dd>
+        <ul>
+            <li>RHEL/CentOS 7 64 Bit
+                <ul>
+                    <li><code># wget http://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm</code></li>
+                    <li><code># rpm -ivh epel-release-latest-7.noarch.rpm</code></li>
+                </ul>
+            </li>
+            <li>RHEL/CentOS 6 64 Bit
+                <ul>
+                    <li><code># wget http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm</code></li>
+                    <li><code># rpm -ivh epel-release-6-8.noarch.rpm</code></li>
+                </ul>
+            </li>
+        </ul>
     </dd>
 </dl>
 
@@ -53,8 +80,9 @@
             <li>Detail: <a href="http://goinbigdata.com/docker-run-vs-cmd-vs-entrypoint/">http://goinbigdata.com/docker-run-vs-cmd-vs-entrypoint/</a></li>
         </ul>
     </dd>
-    
+
     <dt class="question">CMD vs ENTRYPOINT</dt>
+    <dd>
         <ul>
             <li>CMD instruction allows you to set a default command, which will be executed only when you run container without specifying a command.
              If Docker container runs with a command, the default command will be ignored.
@@ -63,11 +91,25 @@
              It looks similar to CMD, because it also allows you to specify a command with parameters.
              The difference is ENTRYPOINT command and parameters are not ignored when Docker container runs with command line parameters.</li>
         </ul>
-    <dd>
     </dd>
 </dl>
 
 <h2>PHP</h2>
+
+<h2>Apache</h2>
+<dl>
+    <dt class="question">What is Apache (internal dummy connection) in httpd access log</dt>
+    <dd>
+        <ul>
+            <li>When the Apache HTTP server manages its child processes, it needs a way to wake up processes that are listening for new connections.
+             To do this, it sends a simple HTTP request back to itself. This request will appear in the access_log file with the remote address set to the loop-back interface (typically 127.0.0.1 or ::1 if IPv6 is configured).
+             If you log the User-Agent string (as in the combined log format), you will see the server signature followed by "(internal dummy connection)" on non-SSL servers.</li>
+            <li>These requests may hit a heavy-weight dynamic web page and cause unnecessary load on the server.</li>
+            <li>You can avoid this by using mod_rewrite to respond with a redirect when accessed with that specific User-Agent or IP address.</li>
+            <li>Related: <a href="https://wiki.apache.org/httpd/InternalDummyConnection">https://wiki.apache.org/httpd/InternalDummyConnection</a></li>
+        </ul>
+    </dd>
+</dl>
 
 <h2>Git</h2>
 <dl>
@@ -118,13 +160,14 @@
             </li>
         </ul>
     </dd>
+
     <dt class="question">What is POSIX?</dt>
     <dd>
-            <ul>
-                <li>Short for "Portable Operating System Interface for uni-X", POSIX is a set of standards codified by the IEEE and issued by ANSI and ISO.
-                 The goal of POSIX is to ease the task of cross-platform software development by establishing a set of guidelines for operating system vendors to follow.</li>
-                <li>Related: <a href="https://kb.iu.edu/d/agjv">https://kb.iu.edu/d/agjv</a></li>
-            </ul>
+        <ul>
+            <li>Short for "Portable Operating System Interface for uni-X", POSIX is a set of standards codified by the IEEE and issued by ANSI and ISO.
+             The goal of POSIX is to ease the task of cross-platform software development by establishing a set of guidelines for operating system vendors to follow.</li>
+            <li>Related: <a href="https://kb.iu.edu/d/agjv">https://kb.iu.edu/d/agjv</a></li>
+        </ul>
     </dd>
 </dl>
 </body>
