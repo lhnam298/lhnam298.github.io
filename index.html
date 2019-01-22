@@ -47,6 +47,15 @@
             </li>
         </ul>
     </dd>
+    
+    <dt class="question">sudo:must be setuid root</dt>
+    <dd>
+        <ul>
+            <li><code>chown root:root /usr/bin/sudo</code></li>
+            <li><code>chmod 4755 /usr/bin/sudo</code></li>
+        </ul>
+    </dd>
+    
 </dl>
 
 <h2>Docker</h2>
@@ -167,6 +176,16 @@
             <li>Short for "Portable Operating System Interface for uni-X", POSIX is a set of standards codified by the IEEE and issued by ANSI and ISO.
              The goal of POSIX is to ease the task of cross-platform software development by establishing a set of guidelines for operating system vendors to follow.</li>
             <li>Related: <a href="https://kb.iu.edu/d/agjv">https://kb.iu.edu/d/agjv</a></li>
+        </ul>
+    </dd>
+
+    <dt class="question">Install jq in Centos</dt>
+    <dd>
+        <ul>
+            <li>Select jq version then copy link of version: <a href="https://stedolan.github.io/jq/download/">https://stedolan.github.io/jq/download/</a></li>
+            <li><code>wget -O jq https://...</code></li>
+            <li><code>chmod +x ./jq</code></li>
+            <li><code>mv jq /usr/bin</code></li>
         </ul>
     </dd>
 </dl>
